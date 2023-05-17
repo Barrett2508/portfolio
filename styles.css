@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 :root {
-    --light-theme: white;
-    --dark-theme:  rgb(37, 37, 37);
-    --dark-text: rgb(0, 179, 255);
-    --dark-theme-alt: rgb(169, 169, 169);
+    --light-main: #F6F1F1;
+    --light-secondary: #19A7CE;
+    --light-third: #146C94;
+    --light-fourth: #000000;
+    --light-text-main: #F6F1F1;
+    --light-text-secondary: #000000;
+
+    --dark-main: #2C3333;
+    --dark-secondary: #2E4F4F;
+    --dark-third: #0E8388;
+    --dark-fourth: #0E8388;
+    --dark-text-main: #F6F1F1;
+    --dark-text-secondary: #000000;
   }
 
 @media only screen and (max-width: 821px) {
@@ -18,9 +27,9 @@
         left: 0;
         width: 100%;
         height: 60px;
-        background-color: var(--primary-color);
-        border-bottom: 0px solid var(--dark-text);
-        border-top: 3px solid var(--dark-text);
+        background-color: var(--light-fourth);
+        border-bottom: 0px solid var(--light-secondary);
+        border-top: 3px solid var(--light-secondary);
         z-index: 1;
         }
 
@@ -70,9 +79,9 @@
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: var(--primary-color);
-    border-bottom: 0px solid var(--dark-text);
-    border-top: 3px solid var(--dark-text);
+    background-color: var(--light-fourth);
+    border-bottom: 0px solid var(--light-secondary);
+    border-top: 3px solid var(--light-secondary);
     z-index: 1;
     }
 
@@ -118,7 +127,7 @@
 
 @media only screen and (min-width: 480px) {
     .nav {
-    border-bottom: 3px solid var(--dark-text);
+    border-bottom: 3px solid var(--light-secondary);
     z-index: 1;
     }
 
@@ -126,16 +135,6 @@
         font-size: 20px !important;
     }
   }
-
-
-.button {
-    background-color: rgb(44, 44, 44);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
-
-
 
 * {
     margin: 0;
@@ -145,6 +144,7 @@
     font-family: sans-serif;
     overflow-x: hidden;
 }
+
 
 body {
     
@@ -186,7 +186,10 @@ body.dark-mode {
     content: attr(data-button);
 }
 
-.intro {
+
+.hero {
+    height: 100dvh;
+    background: linear-gradient(45deg, var(--light-main) 33%, var(--light-third));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,21 +200,20 @@ body.dark-mode {
     max-width: 100vw;
 }
 
-
-
 .intro img {
+    display: flex;
     height: 30vh;
     width: 30vh;
     border-radius: 100%;
-    margin-top: 15vh; 
-    margin-bottom: 25px;
-    border: 3px solid var(--dark-text)
+    margin-bottom: 50px;
+    border: 3px solid var(--light-fourth);
+    margin: 5vh auto;
 }
 
 .intro h1 {
-    color: rgb(0, 0, 0);
+    color: var(--light-text-main);
     text-align: center;
-   
+    margin: 5vh auto;
 }
 
 .intro h1 span {
@@ -220,17 +222,58 @@ body.dark-mode {
     border: none;
   }
 
+.intro-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.intro-buttons button{
+    border-color: transparent;
+    height: 50px;
+    width: 200px;
+    background-color: var(--light-text-secondary);
+    border-radius: 30px;
+    color: #fff;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(37, 30, 37);
+}
+
+
+.skills {
+    text-align: center;
+    color: #fff;
+    background-color: var(--light-fourth);
+    font-size: 22px;  
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.skills h2 {
+    font-family: 'Luckiest Guy', sans-serif;
+    width: 100vw;
+}
+
 .main-center {
-    background-color: var(--dark-text);
+    height: 40vh;
+    background: linear-gradient(45deg, var(--light-third), var(--light-main) 33%);
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 30px;
-    width: 97vw;
+    width: 100vw;
     max-width: 100vw;
     box-shadow: 0 0 10px rgba(37, 30, 37);
-    margin-bottom: 15vh;
+    align-items: center;
 }
 
 .main-center img { 
@@ -243,27 +286,47 @@ body.dark-mode {
     align-items: center;
     
 }
+
+.about-me {
+    text-align: center;
+    color: #fff;
+    background-color: var(--light-secondary);
+    font-size: 22px;  
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.about-me h2 {
+    font-family: 'Luckiest Guy', sans-serif;
+    width: 100vw;
+    background-color: var(--light-fourth);    
+    padding: 10px 0;
+    height: 100%;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me p {
+    font-size: 16px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    color: var(--light-text-secondary);
+    font-weight: 700;
+    margin: auto auto;
+
+}
 .hidden {
     opacity: 0;
     width: 0vw;
 
-}
-
-
-.intro-buttons button{
-    border-color: transparent;
-    height: 35px;
-    width: 120px;
-    background-color: var(--dark-text);
-    border-radius: 30px;
-    color: #fff;
-    margin-bottom: 3vh;
-    margin-top: 3vh;
-    cursor: pointer;
-    margin-right: 15px;
-    margin-left: 15px;
-    font-size: 20px;
-    box-shadow: 0 0 10px rgba(37, 30, 37);
 }
 
 a {
@@ -279,100 +342,29 @@ a:active {
     color: #fff;
 }
 
-.intro-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    
-}
 
-.skills {
-    text-align: center;
-    color: #fff;
-    background-color: rgb(44, 44, 44);
-    font-size: 22px;
-    border-radius:30px ;  
-    width: 97vw;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px rgba(37, 30, 37);
-    padding: 10px 0;
-    margin-bottom: 5vh;
-}
 
-.skills h2 {
-    font-family: 'Luckiest Guy', sans-serif;
-    width: 100vw;
-}
-
-.about-me {
+.projects {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
     align-items: center;
-    font-size: 20px;
-    height: 100vh;
-    width: 97vw;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
-}
-
-.about-me h2 {
-    font-size: 32px;
-    margin-top: 10vh;
-    margin-bottom: 15vh;
-    font-family: 'Luckiest Guy', sans-serif;
-    background-color: rgb(44, 44, 44);
-    width: 97vw;
-    height: 10vh;
-    border-radius: 30px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(37, 30, 37);
+    background-color: var(--light-main);
 }
 
 .projects h2 {
     font-size: 32px;
-    margin-top: 10vh;
     margin-bottom: 5vh;
     font-family: 'Luckiest Guy', sans-serif;
-    background-color: rgb(44, 44, 44);
-    width: 97vw;
-    height: 10vh;
-    border-radius: 30px;
+    background-color: var(--light-fourth);
+    width: 100vw;
+    padding: 10px 0;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px rgba(37, 30, 37);
+    text-align: center;
+    
 }
-
-.about-me p {
-    font-size: 16px;
-    border-bottom: 1px solid transparent;
-    box-shadow: 0 0 10px rgba(37, 30, 37);
-    border-radius: 30px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    background-color: var(--dark-text);
-    color: #fff;
-    font-weight: 700;
-    margin-bottom: 20vh;
-
-}
-
 
 .container {
     display: flex;
@@ -500,6 +492,7 @@ a:active {
 
 .contact-form {
     padding-bottom: 10vh;
+    background-color: var(--light-fourth);
 }
 
 .contact-form input {
@@ -511,7 +504,7 @@ a:active {
     justify-content: flex-end;
     align-items: center;
     border-radius: 30px;
-    border: 1px solid var(--dark-text);
+    border: 1px solid var(--light-secondary);
     padding-left: 10px;
     margin-top: 15px;
     font-size: 20px;
@@ -525,7 +518,7 @@ input[type="submit"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-text);
+    background-color: var(--light-main);
     font-weight: 700;
     font-size: 20px;
     box-shadow: 0 0 10px rgba(37, 30, 37);
