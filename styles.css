@@ -11,7 +11,7 @@
     --dark-main: #2C3333;
     --dark-secondary: #2E4F4F;
     --dark-third: #0E8388;
-    --dark-fourth: #0E8388;
+    --dark-fourth: #0e8388;
     --dark-text-main: #F6F1F1;
     --dark-text-secondary: #000000;
   }
@@ -211,7 +211,7 @@ body.dark-mode {
 }
 
 .intro h1 {
-    color: var(--light-text-main);
+    color: var(--light-text-secondary);
     text-align: center;
     margin: 5vh auto;
 }
