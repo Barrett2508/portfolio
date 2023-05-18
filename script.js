@@ -16,7 +16,7 @@ lightButton.addEventListener('click', function() {
     body.style.background = 'linear-gradient(45deg, var(--light-main) 33%, var(--light-third)';
     heading.style.color = 'black';
     technologies.style.background = 'linear-gradient(45deg, var(--light-third), var(--light-main) 33%)';
-    
+    profilePicture.style.borderColor = '#000000';    
     project.style.background = '#F6F1F1';
     about.style.background = '#19A7CE';
     aboutParagraph.style.color = '#000000';
@@ -30,7 +30,7 @@ lightButton.addEventListener('click', function() {
     body.style.background = 'linear-gradient(45deg, rgb(44, 51, 51) 50%, #0E8388) ';
     heading.style.color = '#F6F1F1';
     technologies.style.background = 'linear-gradient(45deg, #0E8388, rgb(44, 51, 51) 50%) ';
-    profilePicture.style.borderColor = '#0E8388';
+    profilePicture.style.borderColor = '#F6F1F1';
     project.style.background = 'rgb(44, 51, 51)';
     about.style.background = '#0E8388';
     aboutParagraph.style.color = '#F6F1F1';
