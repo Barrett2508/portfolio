@@ -11,7 +11,6 @@ const aboutParagraph = document.querySelector('.about-paragraph')
 const footer = document.querySelector('footer')
 const introSpan = document.querySelector('.intro h2');
 const headlineSpan = document.querySelector('.intro span')
-const wrapper = document.querySelector('.wrapper p')
 
 let text = introHeadline.textContent;
 let characters = text.split('');
@@ -21,7 +20,7 @@ lightButton.addEventListener('click', function() {
     heading.style.color = 'black';
     technologies.style.background = 'linear-gradient(45deg, var(--light-third), var(--light-main) 33%)';
     profilePicture.style.borderColor = '#000000';    
-    project.style.background = '#F6F1F1';
+    project.style.background = 'linear-gradient(135deg, var(--light-third), var(--light-main), var(--light-main), var(--light-third))';
     about.style.background = '#19A7CE';
     aboutParagraph.style.color = '#000000';
     footer.style.color = '#000000';
@@ -40,7 +39,7 @@ lightButton.addEventListener('click', function() {
     heading.style.color = '#F6F1F1';
     technologies.style.background = 'linear-gradient(45deg, #0E8388, rgb(44, 51, 51) 50%) ';
     profilePicture.style.borderColor = '#F6F1F1';
-    project.style.background = 'rgb(44, 51, 51)';
+    project.style.background = 'linear-gradient(135deg, #0E8388, rgb(44, 51, 51), rgb(44, 51, 51), #0E8388)';
     about.style.background = '#0E8388';
     aboutParagraph.style.color = '#F6F1F1';
     darkButton.classList.add('active');

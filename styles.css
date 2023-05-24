@@ -279,7 +279,7 @@ a:active {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--light-main);
+    background: linear-gradient(135deg, var(--light-third), var(--light-main), var(--light-main), var(--light-third));
 }
 
 .projects h2 {
@@ -300,6 +300,7 @@ a:active {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 
