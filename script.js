@@ -8,6 +8,10 @@ const introHeadline = document.querySelector('.about-me h2');
 const project = document.querySelector('.projects');
 const about = document.querySelector('.about-me')
 const aboutParagraph = document.querySelector('.about-paragraph')
+const footer = document.querySelector('footer')
+const introSpan = document.querySelector('.intro h2');
+const headlineSpan = document.querySelector('.intro span')
+const wrapper = document.querySelector('.wrapper p')
 
 let text = introHeadline.textContent;
 let characters = text.split('');
@@ -20,6 +24,11 @@ lightButton.addEventListener('click', function() {
     project.style.background = '#F6F1F1';
     about.style.background = '#19A7CE';
     aboutParagraph.style.color = '#000000';
+    footer.style.color = '#000000';
+    footer.style.backgroundColor = 'var(--light-secondary)';
+    introSpan.style.color = '#000000';
+    headlineSpan.style.color = '#00628d';
+    
 
     darkButton.classList.remove('active');
     lightButton.classList.add('active');
@@ -36,6 +45,10 @@ lightButton.addEventListener('click', function() {
     aboutParagraph.style.color = '#F6F1F1';
     darkButton.classList.add('active');
     lightButton.classList.remove('active');
+    footer.style.color = '#fff';
+    footer.style.backgroundColor = '#0E8388';
+    introSpan.style.color = '#CBE4DE';
+    headlineSpan.style.color = '#CBE4DE';
     
   });
 
@@ -49,6 +62,7 @@ lightButton.addEventListener('click', function() {
           panel.classList.add('active');
           panelLive.classList.add('active');
           panelSource.classList.add('active');
+          wrapper.classList.add('active');
       })
   })
   
@@ -57,5 +71,6 @@ lightButton.addEventListener('click', function() {
           panel.classList.remove('active');
           panelLive.classList.remove('active');
           panelSource.classList.remove('active');
+          wrapper.classList.remove('active');
       })
   }
