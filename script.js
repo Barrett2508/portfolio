@@ -61,7 +61,6 @@ lightButton.addEventListener('click', function() {
           panel.classList.add('active');
           panelLive.classList.add('active');
           panelSource.classList.add('active');
-          wrapper.classList.add('active');
       })
   })
   
@@ -70,6 +69,5 @@ lightButton.addEventListener('click', function() {
           panel.classList.remove('active');
           panelLive.classList.remove('active');
           panelSource.classList.remove('active');
-          wrapper.classList.remove('active');
       })
   }
